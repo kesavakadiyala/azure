@@ -29,7 +29,8 @@ else
     echo -e "\e[32mStarting configuration of Azure Agent\e[0m"
 fi
 
-curl -L -O /home/centos "https://vstsagentpackage.azureedge.net/agent/2.200.2/vsts-agent-linux-x64-2.200.2.tar.gz"
+cd /home/centos
+curl -O "https://vstsagentpackage.azureedge.net/agent/2.200.2/vsts-agent-linux-x64-2.200.2.tar.gz"
 echo -e "\e[33mDownloading Agent artifacts - \e[0m" Status_Check()
 mkdir /home/centos/myagent ; cd /home/centos/myagent
 tar zxvf ../vsts-agent-linux-x64-2.200.2.tar.gz
