@@ -31,16 +31,16 @@ fi
 
 cd /home/centos
 curl -O "https://vstsagentpackage.azureedge.net/agent/2.200.2/vsts-agent-linux-x64-2.200.2.tar.gz"
-echo -e "\e[33mDownloading Agent artifacts - \e[0m" Status_Check()
+echo -e "\e[33mDownloading Agent artifacts - \e[0m" Status_Check
 mkdir /home/centos/myagent ; cd /home/centos/myagent
 tar zxvf ../vsts-agent-linux-x64-2.200.2.tar.gz
-echo -e "\e[33mExtracting artifacts - \e[0m" Status_Check()
+echo -e "\e[33mExtracting artifacts - \e[0m" Status_Check
 
 sudo ./bin/installdependencies.sh
-echo -e "\e[33mInstalling Dependencies - \e[0m" Status_Check()
+echo -e "\e[33mInstalling Dependencies - \e[0m" Status_Check
 
 ./config.sh configure --unattended --url $URL --auth pat --token $PAT --pool $POOL_NAME --agent $AGENT_NAME --acceptTeeEula
-echo -e "\e[33mConfiguring Agent Pool - \e[0m" Status_Check()
+echo -e "\e[33mConfiguring Agent Pool - \e[0m" Status_Check
 
 echo -e "\e[33mStarting AZURE agent\e[0m"
 sudo ./svc.sh install centos
