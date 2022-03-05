@@ -1,5 +1,7 @@
 #!/bin/bash
 
+user_id=`id -u`
+
 if [ $user_id -eq 0 ]; then
     echo "Must not run with sudo"
     exit 1
