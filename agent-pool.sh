@@ -48,7 +48,7 @@ echo -e "\e[33mStarting AZURE agent\e[0m"
 sudo ./svc.sh install centos >> agent.log
 sudo ./svc.sh start >> agent.log
 if [ $? -eq 0 ]; then
-    echo -e "\e[33mStarted Agent Successfully\e[0m"
+    echo -e "\e[32mStarted Agent Successfully\e[0m"
 else
-    echo -e "\e[33mERROR in starting agent\e[0m"
+    echo -e "\e[31mERROR in starting agent\e[0m"
 fi
