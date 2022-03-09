@@ -24,8 +24,8 @@ read -p 'Enter PAT(Personal access token): ' PAT
 read -p 'Enter POOL Name: ' POOL_NAME
 read -p 'Enter Agent Name: ' AGENT_NAME
 
-if [ $URL == "" || $PAT == "" ]; then
-    echo -e "\e[31mMust needed 'Azure Project URL' and 'PAT' \e[0m"
+if [ $URL == null || $PAT == null ]; then
+    echo -e "\e[31mMust needed Azure Project URL and PAT \e[0m"
     exit
 else
     echo -e "\e[32mStarting configuration of Azure Agent\e[0m"
